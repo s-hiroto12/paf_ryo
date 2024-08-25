@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryo Katsumi!!</title>
+    <style>
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        img {
+            width: 500px;
+            transition: transform 0.5s;
+        }
+
+        .rotating {
+            animation: rotate 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ryo Katsumi</h1>
+    <img id="rotatingImage" src="images/kirinuki_katsumi.png" alt="説明文">
+
+    <br><br>
+
+    <button onclick="startRotation()">回転スタート</button>
+    <button onclick="stopRotation()">回転ストップ</button>
+
+    <script>
+        function startRotation() {
+            document.getElementById('rotatingImage').classList.add('rotating');
+        }
+
+        function stopRotation() {
+            document.getElementById('rotatingImage').classList.remove('rotating');
+        }
+    </script>
+</body>
+</html>
